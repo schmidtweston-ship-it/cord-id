@@ -33,7 +33,7 @@ The House standing is **ealwith** (EEL-with). Canonical definition: `ealwith.htm
 
 ## Verify
 
-`verify.html?id=CORD-EA-000001-B` reads the House registry in `registry.js`. It does not call a government system.
+`verify.html?id=CORD-EA-000001-B` reads the House registry in `registry.js`. It does not call a government system. Cord ID does not expire. House residence lives on the verify page so a move does not reprint the card. That page is public.
 
 ## Add the next person
 
