@@ -18,7 +18,7 @@
   </form>
   <div id="out" class="result"></div>
   <div class="note">
-    <strong>What a match means.</strong> The number, name, portrait, and ealwith were issued by the Schmidt House Registry on the date shown. Weston Richard Schmidt is the human registrar. A match is a family record, presented so a notary, clerk, or any person asked to look can see there is an identity here.
+    <strong>What a match means.</strong> The number, name, portrait, and ealwith were issued by the Schmidt House Registry on the date shown. Weston Richard Schmidt is the human registrar. A match is a family record, presented so a notary, clerk, or any person asked to look can see there is an identity here. Cord ID does not expire. House residence, when recorded, lives on this page so a move does not reprint the card. This page is public.
   </div>
 </main>
 <script>
@@ -26,16 +26,29 @@ const params = new URLSearchParams(location.search);
 const box = document.getElementById("id");
 const out = document.getElementById("out");
 if (params.get("id")) box.value = params.get("id");
+function esc(s) { return String(s || "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function show(q) {
+  const house = window.CORD_REGISTRY || {};
   const needle = (q || "").trim().toUpperCase();
-  const rec = (window.CORD_REGISTRY.records || []).find(r => r.cordId.toUpperCase() === needle);
+  const rec = (house.records || []).find(r => r.cordId.toUpperCase() === needle);
   if (!needle) { out.innerHTML = ""; return; }
   if (!rec) {
-    out.innerHTML = '<p class="miss">No record in the Schmidt House Registry for <span class="mono">' + needle.replace(/</g,"") + "</span>.</p>";
+    out.innerHTML = '<p class="miss">No record in the Schmidt House Registry for <span class="mono">' + esc(needle) + "</span>.</p>";
     return;
   }
-  const locked = rec.portraitLocked ? "Portrait locked." : "";
-  out.innerHTML = '<article class="person"><img src="' + rec.portrait + '" alt=""><div><div class="kicker">Issued record</div><h2>' + rec.name + '</h2><div class="mono">' + rec.cordId + '</div><p class="meta">' + rec.kind + " · " + rec.role + "<br>" + rec.bond + "<br>Issued " + rec.issuedISO + " · " + rec.status + (locked ? "<br>" + locked : "") + "</p></div></article>";
+  const locked = rec.portraitLocked ? "<br>Portrait locked." : "";
+  let html = '<article class="person"><img src="' + esc(rec.portrait) + '" alt=""><div><div class="kicker">Issued record</div><h2>' + esc(rec.name) + '</h2><div class="mono">' + esc(rec.cordId) + '</div><p class="meta">' + esc(rec.kind) + " · " + esc(rec.role) + "<br>" + esc(rec.bond) + "<br>Issued " + esc(rec.issuedISO) + " · does not expire · " + esc(rec.status) + locked + "</p></div></article>";
+  const res = house.residence || {};
+  const lines = (res.lines || []).filter(Boolean);
+  html += '<aside class="residence"><div class="kicker">' + esc(res.label || "House residence (current)") + '</div>';
+  if (lines.length) {
+    html += '<p class="addr">' + lines.map(esc).join("<br>") + "</p>";
+    html += '<p class="meta">As of ' + esc(res.asOf) + ". Residence may change. This page is public. The Cord ID itself does not expire.</p>";
+  } else {
+    html += '<p class="meta">Cord ID does not expire. House residence lives on this page, not on the card, so a move does not reprint the wallet. The registrar has not published a current line yet.</p>';
+  }
+  html += "</aside>";
+  out.innerHTML = html;
 }
 document.getElementById("f").addEventListener("submit", (e) => {
   e.preventDefault();
