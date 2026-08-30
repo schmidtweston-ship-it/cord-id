@@ -1,0 +1,11 @@
+{
+  "name": "Eve · Schmidt House",
+  "short_name": "Eve",
+  "start_url": "home.html",
+  "display": "standalone",
+  "background_color": "#0c0a08",
+  "theme_color": "#0c0a08",
+  "icons": [
+    { "src": "icon-eve.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
