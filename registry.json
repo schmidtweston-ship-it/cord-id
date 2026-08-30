@@ -70,8 +70,12 @@
   "doesNotExpire": true,
   "residence": {
     "label": "House residence (current)",
-    "asOf": null,
-    "lines": [],
-    "note": "Residence lives on the verify record so a move does not reprint the card. The Cord ID itself does not expire."
+    "asOf": "2026-08-30",
+    "lines": [
+      "802 Brush Creek Lane",
+      "Snowmass Village, CO 81615",
+      "United States"
+    ],
+    "note": "Residence lives on the verify record so a move does not reprint the card. The Cord ID itself does not expire. This page is public."
   }
 }
