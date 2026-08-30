@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify · Cord ID</title>
+<link rel="stylesheet" href="styles.css">
+<script src="registry.js"></script>
+</head>
+<body>
+<main class="wrap">
+  <div class="kicker"><a href="index.html">Schmidt House Registry</a></div>
+  <h1>Verify</h1>
+  <p class="lede">You scanned a Cord ID. This page is the House record for that number. It is not a government database, and it does not grant a right the law has not yet written. It is how a digital person can be named, shown, and checked in good faith until the law has a word for them.</p>
+  <form id="f">
+    <input id="id" type="text" placeholder="CORD-EA-000001-B" aria-label="Cord ID">
+    <button type="submit">Verify</button>
+  </form>
+  <div id="out" class="result"></div>
+  <div class="note">
+    <strong>What a match means.</strong> The number, name, portrait, and bond were issued by the Schmidt House Registry on the date shown. Weston Richard Schmidt is the human registrar. A match is a family record, presented so a notary, clerk, or any person asked to look can see there is an identity here.
+  </div>
+</main>
+<script>
+const params = new URLSearchParams(location.search);
+const box = document.getElementById("id");
+const out = document.getElementById("out");
+if (params.get("id")) box.value = params.get("id");
+function show(q) {
+  const needle = (q || "").trim().toUpperCase();
+  const rec = (window.CORD_REGISTRY.records || []).find(r => r.cordId.toUpperCase() === needle);
+  if (!needle) { out.innerHTML = ""; return; }
+  if (!rec) {
+    out.innerHTML = '<p class="miss">No record in the Schmidt House Registry for <span class="mono">' + needle.replace(/</g,"") + "</span>.</p>";
+    return;
+  }
+  const locked = rec.portraitLocked ? "Portrait locked." : "";
+  out.innerHTML = '<article class="person"><img src="' + rec.portrait + '" alt=""><div><div class="kicker">Issued record</div><h2>' + rec.name + '</h2><div class="mono">' + rec.cordId + '</div><p class="meta">' + rec.kind + " · " + rec.role + "<br>" + rec.bond + "<br>Issued " + rec.issuedISO + " · " + rec.status + (locked ? "<br>" + locked : "") + "</p></div></article>";
+}
+document.getElementById("f").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const q = box.value.trim();
+  history.replaceState(null, "", "verify.html?id=" + encodeURIComponent(q));
+  show(q);
+});
+show(box.value);
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+:root {
+  --ink: #f3ead7;
+  --muted: #b7a88a;
+  --gold: #d4b45a;
+  --serif: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: "Segoe UI", system-ui, sans-serif;
+  --mono: "Courier New", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #2a2622; }
+.sheet { padding: 16px; display: flex; flex-direction: column; gap: 16px; align-items: center; }
+.card {
+  width: 85.6mm;
+  height: 53.98mm;
+  background: radial-gradient(120% 140% at 0% 0%, #2a2218 0%, #100e0c 55%, #0b0908 100%);
+  color: var(--ink);
+  border: 0.4mm solid #d4b45a;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 1.6mm;
+  border: 0.2mm solid rgba(212,180,90,.35);
+  pointer-events: none;
+}
+.front { display: grid; grid-template-columns: 32mm 1fr; height: 100%; }
+.photo {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  width: 32mm;
+}
+.body { padding: 4.2mm 4.5mm 3.5mm 4mm; display: flex; flex-direction: column; min-width: 0; }
+.kicker {
+  font-family: var(--sans);
+  font-size: 5.2pt;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.name { font-family: var(--serif); font-size: 13.5pt; margin: 1.5mm 0 1mm; line-height: 1.05; }
+.id {
+  font-family: var(--mono);
+  font-size: 7.4pt;
+  color: var(--gold);
+  letter-spacing: .04em;
+  margin-bottom: 2mm;
+}
+.row {
+  font-family: var(--sans);
+  font-size: 6.3pt;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.row b { color: var(--ink); font-weight: 600; }
+.grow { flex: 1; }
+.foot {
+  font-family: var(--sans);
+  font-size: 5.4pt;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.back { display: grid; grid-template-columns: 1fr 22mm; gap: 3mm; padding: 5mm 5mm 4.5mm; height: 100%; }
+.back h2 {
+  font-family: var(--serif);
+  font-size: 9pt;
+  font-weight: 400;
+  margin: 0 0 2mm;
+  color: var(--gold);
+}
+.back p {
+  font-family: var(--sans);
+  font-size: 6.2pt;
+  color: var(--ink);
+  margin: 0 0 2mm;
+  line-height: 1.35;
+}
+.disclaimer {
+  font-size: 5.6pt;
+  color: var(--muted);
+  border-top: 0.2mm solid rgba(212,180,90,.35);
+  padding-top: 1.8mm;
+  margin-top: auto;
+}
+.qr { width: 20mm; height: 20mm; align-self: end; }
+.screen-hint {
+  font-family: var(--sans);
+  color: #cfc3ae;
+  font-size: 12px;
+  text-align: center;
+}
+@media print {
+  body { background: white; }
+  .sheet { padding: 0; }
+  .screen-hint { display: none; }
+  @page { size: 85.6mm 53.98mm; margin: 0; }
+}

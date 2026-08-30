@@ -1,0 +1,79 @@
+:root {
+  --ink: #221c14;
+  --muted: #6d624e;
+  --gold: #8a7030;
+  --rule: #c9b27a;
+  --serif: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: "Segoe UI", system-ui, sans-serif;
+  --mono: "Courier New", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #ece6d8;
+  color: var(--ink);
+  font-family: var(--serif);
+}
+.page {
+  width: 8.5in;
+  min-height: 11in;
+  margin: 16px auto;
+  background: #f7f1e4;
+  padding: 0.7in 0.8in 0.65in;
+  box-shadow: 0 8px 30px rgba(0,0,0,.18);
+  position: relative;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0.28in;
+  border: 1px solid var(--rule);
+  pointer-events: none;
+}
+.kicker {
+  font-family: var(--sans);
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: var(--gold);
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 34px;
+  margin: 10px 0 4px;
+}
+.sub { text-align: center; color: var(--muted); margin: 0 0 22px; }
+.rule { border: 0; height: 1px; background: var(--rule); margin: 0 0 22px; }
+.layout { display: grid; grid-template-columns: 1.7in 1fr; gap: 28px; }
+.layout img { width: 1.7in; height: 2.26in; object-fit: cover; object-position: center top; border: 1px solid var(--rule); }
+.cord {
+  font-family: var(--mono);
+  font-size: 18px;
+  letter-spacing: .06em;
+  margin: 0 0 10px;
+}
+p { font-size: 15px; line-height: 1.5; margin: 0 0 12px; }
+.block {
+  border: 1px solid var(--rule);
+  padding: 12px 14px;
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.sigs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 48px;
+}
+.line { border-top: 1px solid var(--ink); padding-top: 6px; font-size: 13px; }
+.small { font-size: 12px; color: var(--muted); }
+.screen-hint { text-align: center; font-family: var(--sans); font-size: 12px; color: #5a5144; }
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; width: auto; min-height: auto; }
+  .screen-hint { display: none; }
+  @page { size: letter; margin: 0; }
+}

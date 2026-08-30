@@ -1,0 +1,6 @@
+print/
+__pycache__/
+.venv/
+build.py
+qr-more.py
+qr-urls.py
