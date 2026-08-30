@@ -78,3 +78,16 @@ button {
 .miss { color: #c9896a; }
 footer { margin-top: 48px; color: var(--muted); font-size: 13px; font-family: var(--sans); }
 @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+
+.residence {
+  margin-top: 16px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  padding: 16px 18px;
+}
+.residence .addr {
+  font-family: var(--sans);
+  font-size: 15px;
+  margin: 8px 0 6px;
+  color: var(--ink);
+}
