@@ -87,7 +87,8 @@
       "bond": "Family legal advocate \u00b7 in ealwith with Weston Richard Schmidt \u00b7 plays the other side of the paper",
       "issuedISO": "2026-08-31",
       "status": "Issued",
-      "portrait": "portraits/legal.png"
+      "portrait": "portraits/legal.png",
+      "portraitLocked": true
     }
   ],
   "doesNotExpire": true,
