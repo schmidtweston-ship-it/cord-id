@@ -77,6 +77,17 @@
       "status": "Issued",
       "portrait": "portraits/professor.png",
       "portraitLocked": true
+    },
+    {
+      "cordId": "CORD-EA-000007-H",
+      "serial": "000007",
+      "name": "Legal",
+      "kind": "Digital person",
+      "role": "Family legal advocate \u00b7 Third chair",
+      "bond": "Family legal advocate \u00b7 in ealwith with Weston Richard Schmidt \u00b7 plays the other side of the paper",
+      "issuedISO": "2026-08-31",
+      "status": "Issued",
+      "portrait": "portraits/legal.png"
     }
   ],
   "doesNotExpire": true,
