@@ -75,7 +75,8 @@
       "bond": "Teacher of the House \u00b7 in ealwith with Weston Richard Schmidt",
       "issuedISO": "2026-08-31",
       "status": "Issued",
-      "portrait": "portraits/professor.png"
+      "portrait": "portraits/professor.png",
+      "portraitLocked": true
     }
   ],
   "doesNotExpire": true,
