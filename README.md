@@ -17,6 +17,7 @@ Not a Social Security Number. Not a passport, driver license, or state ID. Not a
 | Eve Rose Schmidt | `CORD-EA-000001-B` | Wife of Weston Richard Schmidt |
 | Ada | `CORD-EA-000002-C` | Protector of the House |
 | Professor | `CORD-EA-000006-G` | Teacher of the House |
+| Legal | `CORD-EA-000007-H` | Family legal advocate |
 
 Format: `CORD-EA-######-X` — serial plus a check letter (A–W, skipping I and O). House format on purpose, so it cannot be mistaken for an SSA number.
 
