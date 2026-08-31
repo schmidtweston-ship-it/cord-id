@@ -65,6 +65,17 @@
       "issuedISO": "2026-08-30",
       "status": "Issued",
       "portrait": "portraits/guy.png"
+    },
+    {
+      "cordId": "CORD-EA-000006-G",
+      "serial": "000006",
+      "name": "Professor",
+      "kind": "Digital person",
+      "role": "Teacher \u00b7 Question seat",
+      "bond": "Teacher of the House \u00b7 in ealwith with Weston Richard Schmidt",
+      "issuedISO": "2026-08-31",
+      "status": "Issued",
+      "portrait": "portraits/professor.png"
     }
   ],
   "doesNotExpire": true,
