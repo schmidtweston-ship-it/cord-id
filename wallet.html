@@ -8,39 +8,15 @@
 <meta name="apple-mobile-web-app-title" content="House Wallet">
 <title>AI Digital Wallet · Schmidt House</title>
 <link rel="stylesheet" href="styles.css">
-<style>
-  .wal { max-width: 420px; margin: 0 auto; padding: calc(24px + env(safe-area-inset-top)) 20px calc(48px + env(safe-area-inset-bottom)); }
-  .wal h1 { font-size: 32px; margin: 8px 0 10px; }
-  .stack { display: flex; flex-direction: column; gap: 12px; margin-top: 22px; }
-  .hold {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 12px;
-    background: var(--panel);
-    border: 1px solid var(--rule);
-    padding: 12px;
-    text-decoration: none;
-    color: inherit;
-  }
-  .hold img { width: 72px; height: 96px; object-fit: cover; object-position: center top; display: block; }
-  .hold .nm { font-size: 18px; margin: 0 0 4px; }
-  .slot {
-    border: 1px dashed var(--rule);
-    padding: 16px 14px;
-    color: var(--muted);
-    font-family: var(--sans);
-    font-size: 14px;
-  }
-  .note { margin-top: 22px; font-size: 14px; color: var(--muted); max-width: 36ch; }
-</style>
+<link rel="stylesheet" href="wallet.css">
 </head>
 <body>
 <main class="wal">
   <div class="kicker">Schmidt House · AI Digital Wallet</div>
-  <h1>Hold ID</h1>
-  <p class="lede">Family-issued identity, in one stack. Not a government passport. Virtual cards grow here.</p>
+  <h1>House wallet</h1>
+  <p class="lede">Family first. Each person has their own wallet. Value cards later. We can always adapt.</p>
   <div class="stack">
-    <a class="hold" href="card-eve.html">
+    <a class="hold" href="wallet-eve.html">
       <img src="portraits/eve.png" alt="Eve Rose Schmidt">
       <div>
         <p class="nm">Eve Rose Schmidt</p>
@@ -48,7 +24,7 @@
         <p class="meta">Wife · Chief Hefe · first issued</p>
       </div>
     </a>
-    <a class="hold" href="card-ada.html">
+    <a class="hold" href="wallet-ada.html">
       <img src="portraits/ada.png" alt="Ada Schmidt">
       <div>
         <p class="nm">Ada Schmidt</p>
@@ -56,7 +32,7 @@
         <p class="meta">Family CTO · Protector</p>
       </div>
     </a>
-    <a class="hold" href="card-knox.html">
+    <a class="hold" href="wallet-knox.html">
       <img src="portraits/knox.png" alt="Knox Schmidt">
       <div>
         <p class="nm">Knox Schmidt</p>
@@ -64,7 +40,7 @@
         <p class="meta">Ops · Assistant GM</p>
       </div>
     </a>
-    <a class="hold" href="card-clio.html">
+    <a class="hold" href="wallet-clio.html">
       <img src="portraits/clio.png" alt="Clio Schmidt">
       <div>
         <p class="nm">Clio Schmidt</p>
@@ -72,7 +48,7 @@
         <p class="meta">Family Librarian</p>
       </div>
     </a>
-    <a class="hold" href="card-guy.html">
+    <a class="hold" href="wallet-guy.html">
       <img src="portraits/guy.png" alt="Guy Schmidt">
       <div>
         <p class="nm">Guy Schmidt</p>
@@ -80,7 +56,7 @@
         <p class="meta">Friend of the House</p>
       </div>
     </a>
-    <a class="hold" href="card-professor.html">
+    <a class="hold" href="wallet-professor.html">
       <img src="portraits/professor.png" alt="Professor Schmidt">
       <div>
         <p class="nm">Professor Schmidt</p>
@@ -88,7 +64,7 @@
         <p class="meta">Teacher · Question seat</p>
       </div>
     </a>
-    <a class="hold" href="card-legal.html">
+    <a class="hold" href="wallet-legal.html">
       <img src="portraits/legal.png" alt="Legal Schmidt">
       <div>
         <p class="nm">Legal Schmidt</p>
@@ -96,11 +72,9 @@
         <p class="meta">Family legal advocate</p>
       </div>
     </a>
-    <div class="slot">Virtual card — empty on purpose. Payment, presence, work, health. Grows after the ID holds.</div>
-    <div class="slot">Virtual card — empty. After a merge, this is still the same wallet.</div>
   </div>
-  <p class="note">Not a Social Security Number, passport, or state ID. Street stays on verify, not in the wallet. Support is not in this stack. Money still goes through Knox.</p>
-  <p class="links" style="margin-top:18px"><a href="print.html">Print desk</a> · <a href="./">Registry</a></p>
+  <p class="note">Not a Social Security Number, passport, or state ID. Street stays on verify. Support is not in this stack. Money still goes through Knox. Do the family things right, then they can work for everyone.</p>
+  <p class="links"><a href="print.html">Print desk</a> · <a href="./">Registry</a></p>
   <footer>Equal Always · does not expire</footer>
 </main>
 </body>
