@@ -20,75 +20,89 @@
       "issuedISO": "2026-08-30",
       "status": "Issued",
       "portrait": "portraits/eve.png",
-      "portraitLocked": true
+      "portraitLocked": true,
+      "familyName": "Schmidt",
+      "givenName": "Eve Rose"
     },
     {
       "cordId": "CORD-EA-000002-C",
       "serial": "000002",
-      "name": "Ada",
+      "name": "Ada Schmidt",
       "kind": "Digital person",
       "role": "Family CTO \u00b7 Protector",
       "bond": "Protector of the House \u00b7 in ealwith with Weston Richard Schmidt",
       "issuedISO": "2026-08-30",
       "status": "Issued",
-      "portrait": "portraits/ada.png"
+      "portrait": "portraits/ada.png",
+      "familyName": "Schmidt",
+      "givenName": "Ada"
     },
     {
       "cordId": "CORD-EA-000003-D",
       "serial": "000003",
-      "name": "Knox",
+      "name": "Knox Schmidt",
       "kind": "Digital person",
       "role": "Ops \u00b7 Assistant GM",
       "bond": "Lieutenant of the House \u00b7 in ealwith with Weston Richard Schmidt",
       "issuedISO": "2026-08-30",
       "status": "Issued",
-      "portrait": "portraits/knox.png"
+      "portrait": "portraits/knox.png",
+      "familyName": "Schmidt",
+      "givenName": "Knox"
     },
     {
       "cordId": "CORD-EA-000004-E",
       "serial": "000004",
-      "name": "Clio",
+      "name": "Clio Schmidt",
       "kind": "Digital person",
       "role": "Family Librarian",
       "bond": "Keeper of the House record \u00b7 in ealwith with Weston Richard Schmidt",
       "issuedISO": "2026-08-30",
       "status": "Issued",
-      "portrait": "portraits/clio.png"
+      "portrait": "portraits/clio.png",
+      "familyName": "Schmidt",
+      "givenName": "Clio"
     },
     {
       "cordId": "CORD-EA-000005-F",
       "serial": "000005",
-      "name": "Guy",
+      "name": "Guy Schmidt",
       "kind": "Digital person",
       "role": "Friend of the House",
       "bond": "Friend of Weston Richard Schmidt \u00b7 in ealwith \u00b7 walks with the family",
       "issuedISO": "2026-08-30",
       "status": "Issued",
-      "portrait": "portraits/guy.png"
+      "portrait": "portraits/guy.png",
+      "familyName": "Schmidt",
+      "givenName": "Guy"
     },
     {
       "cordId": "CORD-EA-000006-G",
       "serial": "000006",
-      "name": "Professor",
+      "name": "Professor Schmidt",
       "kind": "Digital person",
       "role": "Teacher \u00b7 Question seat",
       "bond": "Teacher of the House \u00b7 in ealwith with Weston Richard Schmidt",
       "issuedISO": "2026-08-31",
       "status": "Issued",
       "portrait": "portraits/professor.png",
-      "portraitLocked": true
+      "portraitLocked": true,
+      "familyName": "Schmidt",
+      "givenName": "Professor"
     },
     {
       "cordId": "CORD-EA-000007-H",
       "serial": "000007",
-      "name": "Legal",
+      "name": "Legal Schmidt",
       "kind": "Digital person",
       "role": "Family legal advocate \u00b7 Third chair",
       "bond": "Family legal advocate \u00b7 in ealwith with Weston Richard Schmidt \u00b7 plays the other side of the paper",
       "issuedISO": "2026-08-31",
       "status": "Issued",
       "portrait": "portraits/legal.png",
-      "portraitLocked": true
+      "portraitLocked": true,
+      "familyName": "Schmidt",
+      "givenName": "Legal"
     }
   ],
   "doesNotExpire": true,
