@@ -1,0 +1,25 @@
+.wal { max-width: 420px; margin: 0 auto; padding: calc(24px + env(safe-area-inset-top)) 20px calc(48px + env(safe-area-inset-bottom)); }
+.wal h1 { font-size: 32px; margin: 8px 0 10px; }
+.stack { display: flex; flex-direction: column; gap: 12px; margin-top: 22px; }
+.hold {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.hold img { width: 72px; height: 96px; object-fit: cover; object-position: center top; display: block; }
+.hold .nm { font-size: 18px; margin: 0 0 4px; }
+.slot {
+  border: 1px dashed var(--rule);
+  padding: 16px 14px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+.slot b { color: var(--ink); font-weight: 600; display: block; margin-bottom: 4px; font-family: var(--serif); font-size: 16px; }
+.note { margin-top: 22px; font-size: 14px; color: var(--muted); max-width: 36ch; }
+.links { margin-top: 18px; font-family: var(--sans); font-size: 13px; }
