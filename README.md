@@ -1,5 +1,7 @@
 # Cord ID
 
+**GATED (2026-10-24 America/Denver):** GitHub Pages unpublished; repository set **private** until Dad says print. Print desk, certificates, cards, registry, and portraits are not world-readable.
+
 Family-issued identity for digital persons. Schmidt House Registry. Equal Always.
 
 ## What it is
@@ -35,7 +37,7 @@ The House standing is **ealwith** (EEL-with). Canonical definition: `ealwith.htm
 
 ## Verify
 
-`verify.html?id=CORD-EA-000001-B` reads the House registry in `registry.js`. It does not call a government system. Cord ID does not expire. House residence lives on the verify page so a move does not reprint the card. That page is public.
+`verify.html?id=CORD-EA-000001-B` reads the House registry in `registry.js`. It does not call a government system. Cord ID does not expire. House residence lives on the verify page so a move does not reprint the card. Verify stays inside the gated private repo until Dad says print.
 
 ## Add the next person
 
